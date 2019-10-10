@@ -1,0 +1,7 @@
+C:\Users\stephanos\source\repos\HeapInsertLab\HeapInsertLab\bin\Debug\HeapInsertLab.exe.config
+C:\Users\stephanos\source\repos\HeapInsertLab\HeapInsertLab\bin\Debug\HeapInsertLab.exe
+C:\Users\stephanos\source\repos\HeapInsertLab\HeapInsertLab\bin\Debug\HeapInsertLab.pdb
+C:\Users\stephanos\source\repos\HeapInsertLab\HeapInsertLab\obj\Debug\HeapInsertLab.csprojAssemblyReference.cache
+C:\Users\stephanos\source\repos\HeapInsertLab\HeapInsertLab\obj\Debug\HeapInsertLab.csproj.CoreCompileInputs.cache
+C:\Users\stephanos\source\repos\HeapInsertLab\HeapInsertLab\obj\Debug\HeapInsertLab.exe
+C:\Users\stephanos\source\repos\HeapInsertLab\HeapInsertLab\obj\Debug\HeapInsertLab.pdb
