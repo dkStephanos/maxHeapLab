@@ -21,7 +21,7 @@ namespace HeapInsertLab
 
         public void Print()
         {
-            for (int i = 1; i <= size; i++)
+            for (int i = 1; i < h.Length; i++)
             {
                 Console.Write(h[i]);
             }
@@ -38,6 +38,51 @@ namespace HeapInsertLab
                 this.h[current_index] = this.h[current_index / 2];
                 this.h[current_index / 2] = h[0];
                 current_index = current_index / 2;
+            }
+        }
+
+        public string ExtractMax()
+        {
+            this.h[0] = this.h[this.size];
+            this.h[this.size] = this.h[1];
+            this.h[1] = this.h[0];
+            this.size--;
+
+            MaxHeapify(1);
+
+            return this.h[this.size];
+        }
+
+        public void MaxHeapify(int current_index)
+        {
+            int max = current_index;
+            int left = current_index * 2;
+            int right = current_index * 2 + 1;
+
+            if (left <= this.size && 0 > String.Compare(this.h[current_index], this.h[left], StringComparison.Ordinal))
+            {
+                max = left;
+            }
+            else if (right <= this.size && 0 > String.Compare(this.h[max], this.h[right], StringComparison.Ordinal))
+            {
+                max = right;
+            }
+            if (max != current_index)
+            {
+                this.h[0] = this.h[current_index];
+                this.h[current_index] = this.h[max];
+                this.h[max] = h[0];
+                current_index = max;
+                MaxHeapify(max);
+            }
+           
+        }
+
+        public void HeapSort()
+        {
+            while (this.size > 1)
+            {
+                ExtractMax();
             }
         }
     }
