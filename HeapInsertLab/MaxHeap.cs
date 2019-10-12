@@ -21,6 +21,7 @@ namespace HeapInsertLab
 
         public void Print()
         {
+            Console.WriteLine();
             for (int i = 1; i < h.Length; i++)
             {
                 Console.Write(h[i] + " ");
@@ -64,7 +65,7 @@ namespace HeapInsertLab
             {
                 max = left;
             }
-            else if (right <= this.size && 0 > String.Compare(this.h[max], this.h[right], StringComparison.Ordinal))
+            if (right <= this.size && 0 > String.Compare(this.h[max], this.h[right], StringComparison.Ordinal))
             {
                 max = right;
             }
