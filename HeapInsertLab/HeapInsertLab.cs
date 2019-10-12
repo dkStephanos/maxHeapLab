@@ -10,19 +10,24 @@ namespace HeapInsertLab
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the size for the heap:  ");
-            int max_size = Int32.Parse(Console.ReadLine());
-            MaxHeap maxHeap = new MaxHeap(max_size);
-
-            for (int i = 0; i < max_size; i++)
+            string quit = "";
+            while (quit != "quit")
             {
-                Console.WriteLine("\nEnter a string to be entered into the heap:  ");
-                maxHeap.Insert(Console.ReadLine());
-            }
+                Console.WriteLine("Enter the size for the heap:  ");
+                int max_size = Int32.Parse(Console.ReadLine());
+                MaxHeap maxHeap = new MaxHeap(max_size);
 
-            maxHeap.HeapSort();
-            maxHeap.Print();
-            Console.ReadLine();
+                for (int i = 0; i < max_size; i++)
+                {
+                    Console.WriteLine("\nEnter a string to be entered into the heap:  ");
+                    maxHeap.Insert(Console.ReadLine());
+                }
+
+                maxHeap.HeapSort();
+                maxHeap.Print();
+                Console.WriteLine("Enter 'quit' to exit, or enter to sort another heap:  ");
+                quit = Console.ReadLine();
+            }
         }
     }
 }
