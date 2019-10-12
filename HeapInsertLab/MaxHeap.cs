@@ -23,8 +23,9 @@ namespace HeapInsertLab
         {
             for (int i = 1; i < h.Length; i++)
             {
-                Console.Write(h[i]);
+                Console.Write(h[i] + " ");
             }
+            Console.WriteLine();
         }
 
         public void Insert(String item)
